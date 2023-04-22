@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Thank You
+{% endblock %}
+
+{% block main %}
+    
+    
+    <link href="thank.css" rel="stylesheet">
+    <div class="container_cont">
+        <span class="side_square1"></span>
+        <span class="side_square2"></span>
+
+        <div class="formm">
+            <h1>Thank You For Taking The {{ quiz }} quiz</h1>
+            <br>
+            You got {{score}} answers correct out of 10
+        </div>
+
+    </div>
+{% endblock %}

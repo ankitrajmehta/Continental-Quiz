@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{quiz}}
+{% endblock %}
+
+{% block main %}
+    <div class="outer">
+        <div class="qn-box">
+            <!--<form action="/{{quiz_small}}" method="post">
+                <h1>{{ qn_n + 1}}. {{qn_options[qn_n][0]}}</h1>
+                <input type="radio" name="user_ans" value="{{qn_options[qn_n][1]}}"><label><h6>i. {{qn_options[qn_n][1]}} </h6></label><br>
+                <input type="radio" name="user_ans" value="{{qn_options[qn_n][2]}}"><label><h6>ii. {{qn_options[qn_n][2]}} </h6></label><br>
+                <input type="radio" name="user_ans" value="{{qn_options[qn_n][3]}}"><label><h6>iii. {{qn_options[qn_n][3]}} </h6></label><br>
+                <input type="radio" name="user_ans" value="{{qn_options[qn_n][4]}}"><label><h6>iv. {{qn_options[qn_n][4]}} </h6> </label><br>
+                <button type="submit" class="btn btn-success" style="float: right;">Next</button>
+            </form>-->
+
+            <form class="formmm" action="/{{action}}" method="post">
+                <h1>{{ qn_n + 1}}. {{qn_options[qn_n][0]}}</h1>
+                <div class="radiobtn">
+                    <input type="radio" id="opt-1" name="user_ans" value="{{qn_options[qn_n][1]}}"/>
+                    <label for="opt-1">{{qn_options[qn_n][1]}} </label>
+                </div>
+            
+                <div class="radiobtn">
+                    <input type="radio" id="opt-2" name="user_ans" value="{{qn_options[qn_n][2]}}" />
+                    <label for="opt-2">{{qn_options[qn_n][2]}}</label>
+                </div>
+            
+                <div class="radiobtn">
+                    <input type="radio" id="opt-3" name="user_ans" value="{{qn_options[qn_n][3]}}" />
+                    <label for="opt-3">{{qn_options[qn_n][3]}}</label>
+                </div>
+
+                <div class="radiobtn">
+                    <input type="radio" id="opt-4" name="user_ans" value="{{qn_options[qn_n][4]}}"/>
+                    <label for="opt-4">{{qn_options[qn_n][4]}}</label>
+                </div>
+                <input type="hidden" value="{{qn_n}}" name="test" id="test"/>
+                
+
+                <button type="submit" class="btn btn-success" style="float: right;">Next</button>
+            </form>
+           
+        </div> 
+    </div>
+{% endblock %}

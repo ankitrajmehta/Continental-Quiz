@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block main %}
+<div class="home_bg">
+    <img src="/static/images.jpg" alt="quiz">
+    <div class="overlay">
+        <form action="/" method="post">
+            <button type="submit" class="btn btn-success" value="play" name="play">Play!!</button>
+            <button type="submit" class="btn btn-info" value="how" name="how">How To Use?</button>            
+        </form>
+    </div>
+  </div>
+{% endblock %}
